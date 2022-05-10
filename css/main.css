@@ -1,0 +1,231 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*Pallete Colors*/
+/*Media Queries*/
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*Placeholdes*/
+.menu-right, .search, .menu-left {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-right i, .search i {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.menu-right i:hover, .search i:hover {
+  opacity: 0.5;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.menu-left {
+  width: 20%;
+}
+.menu-left .linhas {
+  cursor: pointer;
+}
+.menu-left .linhas .linha,
+.menu-left .linhas .linha1,
+.menu-left .linhas .linha2 {
+  background-color: #ffffff;
+  height: 2px;
+  margin: 6px 0;
+  width: 30px;
+}
+.menu-left img {
+  margin-left: 7%;
+  width: 35%;
+}
+@media screen and (max-width: 600px) {
+  .menu-left .linhas {
+    display: none;
+  }
+  .menu-left img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .menu-left .linhas {
+    display: none;
+  }
+  .menu-left img {
+    width: 80%;
+  }
+}
+
+.search {
+  width: 50%;
+}
+.search form {
+  width: 80%;
+}
+.search form input {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  font-size: 1.1em;
+  outline: none;
+  padding: 2%;
+  width: 100%;
+}
+.search form input:focus {
+  border: 1px solid #cc0000;
+}
+.search .icon-search {
+  background-color: #333333;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  cursor: pointer;
+  padding: 1.5% 2.4%;
+  width: 60px;
+}
+.search .icon-microphone {
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  padding: 1.6% 2%;
+  margin-left: 2%;
+  width: 50px;
+}
+@media screen and (max-width: 600px) {
+  .search form,
+.search .icon-search,
+.search .icon-microphone {
+    display: none;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .search form,
+.search .icon-search,
+.search .icon-microphone {
+    display: none;
+  }
+}
+
+.menu-right {
+  gap: 15%;
+  justify-content: flex-end;
+  width: 10%;
+}
+.menu-right i:last-of-type {
+  display: none;
+}
+.menu-right img {
+  height: 40px;
+  width: 40px;
+}
+@media screen and (max-width: 600px) {
+  .menu-right i {
+    display: none;
+  }
+  .menu-right i:last-of-type {
+    display: inline-block;
+    margin-right: 2%;
+  }
+  .menu-right img {
+    height: auto;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .menu-right i {
+    display: none;
+  }
+  .menu-right i:last-of-type {
+    display: inline-block;
+    margin-right: 2%;
+  }
+  .menu-right img {
+    height: auto;
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

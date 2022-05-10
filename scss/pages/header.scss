@@ -1,0 +1,160 @@
+header {
+    @include display-properties(flex, center, space-between);
+    padding: 1%;
+}
+
+.menu-left {
+    @extend %display-row;
+    width: 20%;
+
+    .linhas {
+        cursor: pointer;
+
+        .linha,
+        .linha1,
+        .linha2 {
+            background-color: $white;
+            height: 2px;
+            margin: 6px 0;
+            width: 30px;
+        }
+    }
+
+    img {
+        margin-left: 7%;
+        width: 35%;
+    }
+
+    @media screen and #{$mq-mobile} {
+        .linhas {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @media screen and #{$mq-tablet} {
+        .linhas {
+            display: none;
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.search {
+    @extend %display-row;
+    width: 50%;
+
+    form {
+        width: 80%;
+
+        input {
+            background-color: $black-dark;
+            border: 1px solid $black-light;
+            font-size: 1.1em;
+            outline: none;
+            padding: 2%;
+            width: 100%;
+
+            &:focus {
+                border: 1px solid $red;
+            }
+        }
+    }
+
+    .icon-search {
+        background-color: $black-light;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        cursor: pointer;
+        padding: 1.5% 2.4%;
+        width: 60px;
+    }
+
+    .icon-microphone {
+        background-color: $black-dark;
+        border-radius: 50%;
+        padding: 1.6% 2%;
+        margin-left: 2%;
+        width: 50px;
+    }
+
+    i {
+        @extend %style-icons;
+    }
+
+    @media screen and #{$mq-mobile} {
+
+        form,
+        .icon-search,
+        .icon-microphone {
+            display: none;
+        }
+    }
+
+    @media screen and #{$mq-tablet} {
+
+        form,
+        .icon-search,
+        .icon-microphone {
+            display: none;
+        }
+    }
+}
+
+.menu-right {
+    @extend %display-row;
+    gap: 15%;
+    justify-content: flex-end;
+    width: 10%;
+
+    i {
+        @extend %style-icons;
+
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    @media screen and #{$mq-mobile} {
+        i {
+            display: none;
+
+            &:last-of-type {
+                display: inline-block;
+                margin-right: 2%;
+            }
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    @media screen and #{$mq-tablet} {
+        i {
+            display: none;
+
+            &:last-of-type {
+                display: inline-block;
+                margin-right: 2%;
+            }
+        }
+
+        img {
+            height: auto;
+            width: 50%;
+        }
+    }
+}
