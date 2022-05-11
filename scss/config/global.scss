@@ -10,6 +10,11 @@ a {
     text-decoration: none;
 }
 
+.container {
+    display: flex;
+    width: 100%;
+}
+
 /*Placeholdes*/
 %display-row {
     align-items: center;
@@ -23,5 +28,24 @@ a {
 
     &:hover {
         opacity: 0.5;
+    }
+}
+
+%text-tooltip {
+    background-color: $black-dark;
+    border-radius: 5px;
+    color: $white;
+    font-size: 0.9em;
+    margin-left: -45px;
+    opacity: 0.8;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    visibility: hidden;
+    z-index: 1;
+
+    &:hover {
+        visibility: visible;
     }
 }

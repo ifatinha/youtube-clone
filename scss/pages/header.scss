@@ -88,6 +88,10 @@ header {
         @extend %style-icons;
     }
 
+    p {
+        @extend %text-tooltip;
+    }
+
     @media screen and #{$mq-mobile} {
 
         form,
@@ -124,6 +128,10 @@ header {
     img {
         height: 40px;
         width: 40px;
+    }
+
+    p {
+        @extend %text-tooltip;
     }
 
     @media screen and #{$mq-mobile} {

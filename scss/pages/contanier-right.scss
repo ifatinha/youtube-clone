@@ -1,0 +1,88 @@
+.container-right {
+    @include display-properties(flex, flex-start, space-between);
+    border-top: 1px solid $black-light;
+    flex-wrap: wrap;
+    padding: 1% 2%;
+    width: 85%;
+
+    .card-video {
+        cursor: pointer;
+        margin: 5px 1px;
+        width: 24%;
+
+        video {
+            width: 100%;
+        }
+
+        .card-info {
+            @extend %display-row;
+            padding: 2%;
+            width: 100%;
+
+            img {
+                border-radius: 50%;
+                height: 36px;
+                margin-right: 3%;
+                width: 36px;
+            }
+
+            p {
+                font-size: 0.9em;
+                font-weight: bold;
+            }
+        }
+
+        .card-footer {
+            color: $gray;
+            font-size: 0.7em;
+            margin-left: 15%;
+            margin-top: 2%;
+            padding-bottom: 5%;
+        }
+
+        .card-buttons {
+            margin: 2% 0;
+            display: none;
+            text-align: center;
+
+            a {
+                color: $white;
+                display: inline-block;
+                font-size: 0.9em;
+                margin: 2% 0;
+                padding: 2% 0;
+                text-align: center;
+                width: 90%;
+            }
+
+            i {
+                margin-right: 3%;
+            }
+        }
+
+        &:hover {
+            background-color: $black-dark;
+            border: 1px solid $black-light;
+            transition: 0.4s;
+            transform: scale(1.1);
+
+            .card-buttons {
+                display: block;
+
+                a {
+                    background-color: $black-light;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    @media screen and #{$mq-mobile} {
+        flex-direction: column;
+        width: 100%;
+        .card-video {
+            margin: 5% 0;
+            width: 100%;
+        }
+    }
+}
