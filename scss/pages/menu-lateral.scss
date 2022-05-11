@@ -1,0 +1,98 @@
+.container-left {
+    height: 90vh;
+    overflow-y: scroll;
+    width: 15%;
+
+    nav {
+
+        ul {
+            margin: 3% 0;
+        }
+
+        li {
+            padding: 4%;
+            color: $white;
+
+            &:hover {
+                background-color: $black-light;
+                cursor: pointer;
+            }
+        }
+
+        a {
+            color: $white;
+            font-size: 0.9em;
+            margin-left: 8%;
+        }
+
+        hr {
+            background-color: $black-light;
+            border: none;
+            content: "";
+            height: 1px;
+            margin: 3% 1%;
+        }
+
+        h3 {
+            color: $gray;
+            margin: 3%;
+            text-transform: uppercase;
+        }
+
+        img {
+            height: 28px;
+            border-radius: 50%;
+            margin-bottom: -5%;
+            width: 28px;
+        }
+
+        .links-nav {
+            font-weight: 800;
+            font-size: 0.9em;
+            margin: 5% 0;
+            padding: 1%;
+
+            a {
+                color: $gray;
+                display: block;
+                line-height: 1.4em;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        p {
+            color: $gray;
+            font-size: 0.8em;
+            margin: 5%;
+            padding: 1%;
+        }
+    }
+
+    @media screen and #{$mq-mobile} {
+        display: none;
+    }
+
+    @media screen and #{$mq-tablet} {
+        display: none;
+    }
+}
+
+/*Formatando Scrollbar*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: $black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $black-dark;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $black-light;
+}

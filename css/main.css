@@ -85,6 +85,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Placeholdes*/
 .menu-right, .search, .menu-left {
   align-items: center;
@@ -226,6 +230,93 @@ header {
     height: auto;
     width: 50%;
   }
+}
+
+.container-left {
+  height: 90vh;
+  overflow-y: scroll;
+  width: 15%;
+}
+.container-left nav ul {
+  margin: 3% 0;
+}
+.container-left nav li {
+  padding: 4%;
+  color: #ffffff;
+}
+.container-left nav li:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
+.container-left nav a {
+  color: #ffffff;
+  font-size: 0.9em;
+  margin-left: 8%;
+}
+.container-left nav hr {
+  background-color: #333333;
+  border: none;
+  content: "";
+  height: 1px;
+  margin: 3% 1%;
+}
+.container-left nav h3 {
+  color: #cccccc;
+  margin: 3%;
+  text-transform: uppercase;
+}
+.container-left nav img {
+  height: 28px;
+  border-radius: 50%;
+  margin-bottom: -5%;
+  width: 28px;
+}
+.container-left nav .links-nav {
+  font-weight: 800;
+  font-size: 0.9em;
+  margin: 5% 0;
+  padding: 1%;
+}
+.container-left nav .links-nav a {
+  color: #cccccc;
+  display: block;
+  line-height: 1.4em;
+}
+.container-left nav .links-nav a:hover {
+  color: #ffffff;
+}
+.container-left nav p {
+  color: #cccccc;
+  font-size: 0.8em;
+  margin: 5%;
+  padding: 1%;
+}
+@media screen and (max-width: 600px) {
+  .container-left {
+    display: none;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .container-left {
+    display: none;
+  }
+}
+
+/*Formatando Scrollbar*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
 }
 
 /*# sourceMappingURL=main.css.map */
