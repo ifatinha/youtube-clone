@@ -1,77 +1,109 @@
 .container-right {
-    @include display-properties(flex, flex-start, space-between);
+    display: flex;
+    flex-direction: column;
     border-top: 1px solid $black-light;
     flex-wrap: wrap;
-    padding: 1% 2%;
     width: 85%;
 
-    .card-video {
-        cursor: pointer;
-        margin: 5px 1px;
-        width: 24%;
+    .content-links {
+        border-bottom: 1px solid $black-light;
+        padding: 1%;
+        width: 100%;
 
-        video {
-            width: 100%;
-        }
+        a {
+            background-color: $black-light;
+            border: 1px solid $black-dark;
+            border-radius: 50px;
+            color: $white;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 5px 10px;
 
-        .card-info {
-            @extend %display-row;
-            padding: 2%;
-            width: 100%;
-
-            img {
-                border-radius: 50%;
-                height: 36px;
-                margin-right: 3%;
-                width: 36px;
+            &:first-of-type {
+                background-color: $white;
+                color: $black-dark;
             }
 
-            p {
-                font-size: 0.9em;
-                font-weight: bold;
+            &:hover {
+                opacity: 0.8;
             }
         }
+    }
 
-        .card-footer {
-            color: $gray;
-            font-size: 0.7em;
-            margin-left: 15%;
-            margin-top: 2%;
-            padding-bottom: 5%;
-        }
+    .content-videos {
+        @include display-properties(flex, flex-start, space-between);
+        flex-wrap: wrap;
+        padding: 1%;
+        width: 100%;
 
-        .card-buttons {
-            margin: 2% 0;
-            display: none;
-            text-align: center;
+        .card-video {
+            cursor: pointer;
+            margin: 10px 1px;
+            width: 20%;
 
-            a {
-                color: $white;
-                display: inline-block;
-                font-size: 0.9em;
-                margin: 2% 0;
-                padding: 2% 0;
-                text-align: center;
-                width: 90%;
+            video {
+                width: 100%;
             }
 
-            i {
-                margin-right: 3%;
-            }
-        }
+            .card-info {
+                @extend %display-row;
+                padding: 2%;
+                width: 100%;
 
-        &:hover {
-            background-color: $black-dark;
-            border: 1px solid $black-light;
-            transition: 0.4s;
-            transform: scale(1.1);
+                img {
+                    border-radius: 50%;
+                    height: 36px;
+                    margin-right: 3%;
+                    width: 36px;
+                }
+
+                p {
+                    font-size: 0.9em;
+                    font-weight: bold;
+                }
+            }
+
+            .card-footer {
+                color: $gray;
+                font-size: 0.7em;
+                margin-left: 15%;
+                margin-top: 2%;
+                padding-bottom: 5%;
+            }
 
             .card-buttons {
-                display: block;
+                margin: 2% 0;
+                display: none;
+                text-align: center;
 
                 a {
-                    background-color: $black-light;
-                    opacity: 0.8;
+                    color: $white;
+                    display: inline-block;
+                    font-size: 0.9em;
+                    margin: 2% 0;
+                    padding: 2% 0;
+                    text-align: center;
+                    width: 90%;
+                }
+
+                i {
+                    margin-right: 3%;
+                }
+            }
+
+            &:hover {
+                background-color: $black-dark;
+                border: 1px solid $black-light;
+                transition: 0.4s;
+                transform: scale(1.1);
+
+                .card-buttons {
+                    display: block;
+
+                    a {
+                        background-color: $black-light;
+                        opacity: 0.8;
+                    }
                 }
             }
         }
@@ -80,9 +112,35 @@
     @media screen and #{$mq-mobile} {
         flex-direction: column;
         width: 100%;
-        .card-video {
+
+        .content-links {
+            display: none;
+        }
+
+        .content-videos .card-video {
             margin: 5% 0;
             width: 100%;
+        }
+    }
+
+    @media screen and #{$mq-tablet} {
+        flex-direction: column;
+        width: 100%;
+
+        .content-links {
+            display: none;
+        }
+
+        .content-videos {
+            .card-video {
+                margin: 5% 0;
+                width: 100%;
+            }
+
+            .card-footer {
+                margin-left: 0;
+                background-color: rebeccapurple;
+            }
         }
     }
 }
