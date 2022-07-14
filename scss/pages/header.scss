@@ -1,6 +1,10 @@
 header {
     @include display-properties(flex, center, space-between);
-    padding: 1%;
+    background-color: $black;
+    height: 10vh;
+    padding: 1% 2%;
+    position: fixed;
+    z-index: 2
 }
 
 .menu-left {

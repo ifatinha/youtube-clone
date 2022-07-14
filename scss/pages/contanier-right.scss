@@ -3,10 +3,15 @@
     flex-direction: column;
     border-top: 1px solid $black-light;
     flex-wrap: wrap;
+    left: 15%;
+    position: absolute;
     width: 85%;
 
     .content-links {
+        background-color: $black;
+        border-top: 1px solid $black-light;
         border-bottom: 1px solid $black-light;
+        position: fixed;
         padding: 1%;
         width: 100%;
 
@@ -31,16 +36,25 @@
     }
 
     .content-videos {
-        @include display-properties(flex, flex-start, space-between);
+        @include display-properties(flex, center, center);
+        background-color: $black-dark;
         flex-wrap: wrap;
+        flex: 1;
+        gap: 10px;
+        margin-top: 4%;
         padding: 1%;
         width: 100%;
 
         .card-video {
+            border: 1px solid transparent;
             cursor: pointer;
-            margin: 10px 1px;
-            width: 20%;
-
+            overflow: hidden;
+            transition: all .8s ease-in-out;
+            transform: scale(1);
+            
+            background-color: darkblue;
+            width: 300px;
+            
             video {
                 width: 100%;
             }
@@ -94,9 +108,9 @@
             &:hover {
                 background-color: $black-dark;
                 border: 1px solid $black-light;
-                transition: 0.4s;
+                transition: all 200ms ease-in;
                 transform: scale(1.1);
-
+                z-index: 1;
                 .card-buttons {
                     display: block;
 

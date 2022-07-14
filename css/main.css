@@ -80,7 +80,7 @@ th {
 /*Pallete Colors*/
 /*Media Queries*/
 body {
-  background-color: #000000;
+  background-color: #1a1a1a;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
 }
@@ -91,6 +91,8 @@ a {
 
 .container {
   display: flex;
+  position: relative;
+  top: 70px;
   width: 100%;
 }
 
@@ -131,7 +133,11 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1%;
+  background-color: #000000;
+  height: 10vh;
+  padding: 1% 2%;
+  position: fixed;
+  z-index: 2;
 }
 
 .menu-left {
@@ -177,7 +183,7 @@ header {
 }
 .search form input {
   background-color: #1a1a1a;
-  border: 1px solid #333333;
+  border: 1px solid #302e2e;
   font-size: 1.1em;
   outline: none;
   padding: 2%;
@@ -187,7 +193,7 @@ header {
   border: 1px solid #cc0000;
 }
 .search .icon-search {
-  background-color: #333333;
+  background-color: #302e2e;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   cursor: pointer;
@@ -256,8 +262,10 @@ header {
 }
 
 .container-left {
-  height: 90vh;
+  background-color: #000000;
+  height: 100vh;
   overflow-y: scroll;
+  position: fixed;
   width: 15%;
 }
 .container-left nav ul {
@@ -268,7 +276,7 @@ header {
   color: #ffffff;
 }
 .container-left nav li:hover {
-  background-color: #333333;
+  background-color: #302e2e;
   cursor: pointer;
 }
 .container-left nav a {
@@ -277,7 +285,7 @@ header {
   margin-left: 8%;
 }
 .container-left nav hr {
-  background-color: #333333;
+  background-color: #302e2e;
   border: none;
   content: "";
   height: 1px;
@@ -335,27 +343,32 @@ header {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a1a1a;
+  background: #302e2e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #333333;
+  background: #302e2e;
 }
 
 .container-right {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #302e2e;
   flex-wrap: wrap;
+  left: 15%;
+  position: absolute;
   width: 85%;
 }
 .container-right .content-links {
-  border-bottom: 1px solid #333333;
+  background-color: #000000;
+  border-top: 1px solid #302e2e;
+  border-bottom: 1px solid #302e2e;
+  position: fixed;
   padding: 1%;
   width: 100%;
 }
 .container-right .content-links a {
-  background-color: #333333;
+  background-color: #302e2e;
   border: 1px solid #1a1a1a;
   border-radius: 50px;
   color: #ffffff;
@@ -371,17 +384,25 @@ header {
   opacity: 0.8;
 }
 .container-right .content-videos {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: #1a1a1a;
   flex-wrap: wrap;
+  flex: 1;
+  gap: 10px;
+  margin-top: 4%;
   padding: 1%;
   width: 100%;
 }
 .container-right .content-videos .card-video {
+  border: 1px solid transparent;
   cursor: pointer;
-  margin: 10px 1px;
-  width: 20%;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+  transform: scale(1);
+  background-color: darkblue;
+  width: 300px;
 }
 .container-right .content-videos .card-video video {
   width: 100%;
@@ -426,15 +447,16 @@ header {
 }
 .container-right .content-videos .card-video:hover {
   background-color: #1a1a1a;
-  border: 1px solid #333333;
-  transition: 0.4s;
+  border: 1px solid #302e2e;
+  transition: all 200ms ease-in;
   transform: scale(1.1);
+  z-index: 1;
 }
 .container-right .content-videos .card-video:hover .card-buttons {
   display: block;
 }
 .container-right .content-videos .card-video:hover .card-buttons a {
-  background-color: #333333;
+  background-color: #302e2e;
   opacity: 0.8;
 }
 @media screen and (max-width: 600px) {
